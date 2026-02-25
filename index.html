@@ -418,6 +418,87 @@
       </div>
     </section>
 
+    <!-- ─── Blueprint ───────────────────────────────────────────────── -->
+    <section class="blueprint" id="blueprint">
+      <div class="container">
+        <div class="blueprint-header reveal">
+          <span class="section-eyebrow">07 — BLUEPRINT</span>
+          <div class="blueprint-header-row">
+            <h2 class="section-title">How something<br /><em>like this gets built</em></h2>
+            <p class="blueprint-intro">None of the core engines need to be invented. The hard part is assembling them, scaling the infrastructure, and having the scientific expertise to know when the output is meaningful.</p>
+          </div>
+        </div>
+
+        <div class="blueprint-stack">
+
+          <div class="blueprint-row reveal" style="--reveal-delay: 0s">
+            <span class="bp-index">01</span>
+            <div class="bp-layer">
+              <span class="bp-layer-name">Visualization</span>
+              <span class="bp-tools">Three.js · WebGL · GLSL</span>
+            </div>
+            <p class="bp-desc">The 3D frontend — rendering the cell, shaders, scroll and mouse interaction. This is what you're looking at right now.</p>
+            <span class="bp-badge bp-badge--done">Already built</span>
+          </div>
+
+          <div class="blueprint-row reveal" style="--reveal-delay: 0.08s">
+            <span class="bp-index">02</span>
+            <div class="bp-layer">
+              <span class="bp-layer-name">Structure Prediction</span>
+              <span class="bp-tools">AlphaFold2 · ESMFold · RoseTTAFold</span>
+            </div>
+            <p class="bp-desc">ML models that predict a protein's 3D shape from its amino acid sequence alone. Open source and deployable on cloud GPUs.</p>
+            <span class="bp-badge bp-badge--oss">Open source</span>
+          </div>
+
+          <div class="blueprint-row reveal" style="--reveal-delay: 0.16s">
+            <span class="bp-index">03</span>
+            <div class="bp-layer">
+              <span class="bp-layer-name">Simulation Engine</span>
+              <span class="bp-tools">GROMACS · OpenMM · NAMD · AMBER</span>
+            </div>
+            <p class="bp-desc">Physics engines that simulate how atoms move and interact over time. Decades of academic research, freely available.</p>
+            <span class="bp-badge bp-badge--oss">Open source</span>
+          </div>
+
+          <div class="blueprint-row reveal" style="--reveal-delay: 0.24s">
+            <span class="bp-index">04</span>
+            <div class="bp-layer">
+              <span class="bp-layer-name">Biological Databases</span>
+              <span class="bp-tools">PDB · UniProt · Ensembl · ChEMBL</span>
+            </div>
+            <p class="bp-desc">200M+ protein sequences, 200K+ experimentally solved structures, and annotated genomes. All public, regularly updated.</p>
+            <span class="bp-badge bp-badge--free">Free &amp; public</span>
+          </div>
+
+          <div class="blueprint-row reveal" style="--reveal-delay: 0.32s">
+            <span class="bp-index">05</span>
+            <div class="bp-layer">
+              <span class="bp-layer-name">Compute Infrastructure</span>
+              <span class="bp-tools">NVIDIA A100 · AWS HPC · Google Cloud</span>
+            </div>
+            <p class="bp-desc">GPU clusters that do the heavy lifting. The primary cost driver — a meaningful cluster runs $2–5M per year at cloud rates.</p>
+            <span class="bp-badge bp-badge--cloud">Cloud available</span>
+          </div>
+
+          <div class="blueprint-row reveal" style="--reveal-delay: 0.40s">
+            <span class="bp-index">06</span>
+            <div class="bp-layer">
+              <span class="bp-layer-name">Scientific Expertise</span>
+              <span class="bp-tools">Biophysicists · Computational Chemists</span>
+            </div>
+            <p class="bp-desc">The hardest dependency. Domain experts who know whether the simulation results are physically meaningful — or just plausible-looking noise.</p>
+            <span class="bp-badge bp-badge--hard">The real barrier</span>
+          </div>
+
+        </div>
+
+        <p class="blueprint-footnote reveal" style="--reveal-delay: 0.1s">
+          Real-world equivalents: <span class="bp-co">Schrödinger</span> (founded 1990), <span class="bp-co">D.E. Shaw Research</span> (2002), <span class="bp-co">Relay Therapeutics</span> (2016). All took 5–10 years to reach product maturity.
+        </p>
+      </div>
+    </section>
+
     <!-- ─── Footer ─────────────────────────────────────────────────── -->
     <footer class="site-footer">
       <div class="container">
