@@ -369,11 +369,15 @@ window.addEventListener('resize', () => {
 
 // ─── Animate ─────────────────────────────────────────────────────
 const clock = new THREE.Clock();
+let elapsed = 0;
+let animationId = null;
 
 function animate() {
-  requestAnimationFrame(animate);
+  animationId = requestAnimationFrame(animate);
 
-  const elapsed = clock.getElapsedTime();
+  // Accumulate time manually so pausing the loop (tab hidden) doesn't
+  // cause a time jump in the shaders when the tab becomes visible again.
+  elapsed += clock.getDelta();
 
   // Lerp morph
   morphCurrent += (morphTarget - morphCurrent) * 0.04;
@@ -403,5 +407,18 @@ function animate() {
 
   renderer.render(scene, camera);
 }
+
+// Pause the render loop when the tab is hidden; resume when visible.
+// This prevents the GPU from doing useless work while the user is elsewhere.
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    cancelAnimationFrame(animationId);
+    animationId = null;
+    clock.stop();
+  } else {
+    clock.start(); // resets delta so the first frame after resume adds ~0 to elapsed
+    animate();
+  }
+});
 
 animate();
