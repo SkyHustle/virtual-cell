@@ -408,17 +408,41 @@ function animate() {
   renderer.render(scene, camera);
 }
 
-// Pause the render loop when the tab is hidden; resume when visible.
-// This prevents the GPU from doing useless work while the user is elsewhere.
+// ─── Loop lifecycle helpers ───────────────────────────────────────
+// The loop should only run when BOTH conditions are true:
+//   1. The browser tab is visible
+//   2. The hero section is in the viewport
+// Coordinating both here prevents the GPU from running the heavy FBM
+// shaders when the user can't see the result.
+
+let heroInView = true; // true on load — hero is the first thing visible
+
+function startLoop() {
+  if (animationId) return;           // already running
+  if (!heroInView || document.hidden) return; // conditions not met
+  clock.start(); // reset delta so first frame doesn't jump
+  animate();
+}
+
+function stopLoop() {
+  if (!animationId) return;          // already stopped
+  cancelAnimationFrame(animationId);
+  animationId = null;
+  clock.stop();
+}
+
+// Pause when hero scrolls out of view; resume when any pixel is visible.
+new IntersectionObserver(
+  ([entry]) => {
+    heroInView = entry.isIntersecting;
+    heroInView ? startLoop() : stopLoop();
+  },
+  { threshold: 0 }
+).observe(hero);
+
+// Pause when the tab is backgrounded.
 document.addEventListener('visibilitychange', () => {
-  if (document.hidden) {
-    cancelAnimationFrame(animationId);
-    animationId = null;
-    clock.stop();
-  } else {
-    clock.start(); // resets delta so the first frame after resume adds ~0 to elapsed
-    animate();
-  }
+  document.hidden ? stopLoop() : startLoop();
 });
 
 animate();
