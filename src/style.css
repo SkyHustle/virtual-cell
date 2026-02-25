@@ -1467,23 +1467,23 @@ body {
   font-family: var(--font-mono);
   font-size: 0.62rem;
   letter-spacing: 0.08em;
-  color: var(--dim);
-  opacity: 0.45;
+  color: var(--accent2);
+  opacity: 0.8;
   padding: 1.25rem 0;
-  border-top: 1px solid rgba(58, 62, 90, 0.15);
-  border-bottom: 1px solid rgba(58, 62, 90, 0.15);
+  border-top: 1px solid rgba(167, 139, 250, 0.12);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.12);
   margin-bottom: 1.5rem;
 }
 
 .footer-concept-link {
   color: var(--accent);
   text-decoration: none;
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
+  opacity: 1;
+  transition: color 0.2s ease;
 }
 
 .footer-concept-link:hover {
-  opacity: 1;
+  color: var(--accent2);
 }
 
 .footer-bottom {
