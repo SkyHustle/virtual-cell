@@ -1371,17 +1371,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .hero-content {
-    width: 90%;
-    padding: 0 0 0 1.5rem;
-  }
-  .sidebar-label {
-    display: none;
-  }
-  .headline {
-    font-size: clamp(2.8rem, 10vw, 4rem);
-  }
-
   .stats-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto auto;
