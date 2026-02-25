@@ -2,6 +2,8 @@
 
 A full marketing landing page for a biology SaaS product. Features a 3D morphing cell in WebGL, scroll-driven interactions, and six content sections built with vanilla JS, CSS, and Three.js.
 
+![Virtual Cell hero](public/og-image.png)
+
 ## Stack
 
 - **Vite ^6** — dev server + bundler
