@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Cell — Biological Intelligence Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <!-- WebGL canvas injected here by main.js -->
+
+      <!-- Dot-grid overlay -->
+      <div class="grid-overlay" aria-hidden="true"></div>
+
+      <!-- Content layer -->
+      <div class="hero-content">
+        <!-- Index label -->
+        <span class="index-label fade-up" style="--delay: 0.1s">01</span>
+
+        <!-- Vertical sidebar label -->
+        <span class="sidebar-label fade-up" style="--delay: 0.3s" aria-hidden="true">
+          MEMBRANE / CORE
+        </span>
+
+        <!-- Main headline -->
+        <div class="headline-block">
+          <h1 class="headline fade-up" style="--delay: 0.4s">
+            <span class="headline-thin">Virtual</span>
+            <span class="headline-light">Cell</span>
+          </h1>
+          <div class="divider fade-up" style="--delay: 0.6s" aria-hidden="true"></div>
+          <p class="tagline fade-up" style="--delay: 0.7s">
+            Biological intelligence,<br />rendered at atomic fidelity.
+          </p>
+        </div>
+
+        <!-- Meta row -->
+        <div class="meta-row fade-up" style="--delay: 0.9s">
+          <span class="meta-tag">PROTEOMICS</span>
+          <span class="meta-dot" aria-hidden="true">·</span>
+          <span class="meta-tag">GENOMICS</span>
+          <span class="meta-dot" aria-hidden="true">·</span>
+          <span class="meta-tag">SIMULATION</span>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-group fade-up" style="--delay: 1.1s">
+          <button class="btn-primary" type="button">Begin Simulation</button>
+          <button class="btn-ghost" type="button">Explore Atlas</button>
+        </div>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="scroll-hint fade-up" style="--delay: 1.4s" aria-label="Scroll to explore">
+        <div class="scroll-track" aria-hidden="true">
+          <div class="scroll-thumb"></div>
+        </div>
+        <span class="scroll-label">SCROLL</span>
+      </div>
+    </section>
+
+    <!-- Spacer for scroll demo -->
+    <div style="height: 300vh; background: #04040a;"></div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
