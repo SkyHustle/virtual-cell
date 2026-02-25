@@ -11,9 +11,60 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/style.css" />
+
+    <!-- ─── SEO: core ─────────────────────────────────────────────── -->
+    <meta name="description" content="Virtual Cell is a biological intelligence platform for protein structure prediction, molecular dynamics simulation, and single-base genomic analysis — rendered at atomic fidelity." />
+    <meta name="robots" content="index, follow" />
+    <!-- Update href to the production domain before deploying -->
+    <link rel="canonical" href="https://virtualcell.io/" />
+
+    <!-- ─── SEO: Open Graph (social sharing) ─────────────────────── -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://virtualcell.io/" />
+    <meta property="og:title"       content="Virtual Cell — Biological Intelligence Platform" />
+    <meta property="og:description" content="Protein structure prediction, molecular dynamics simulation, and genomic analysis at atomic fidelity. Explore 847 catalogued cell types across 32 tissue families." />
+    <meta property="og:image"       content="https://virtualcell.io/og-image.png" />
+
+    <!-- ─── SEO: Twitter / X Card ────────────────────────────────── -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="Virtual Cell — Biological Intelligence Platform" />
+    <meta name="twitter:description" content="Protein structure prediction, molecular dynamics simulation, and genomic analysis at atomic fidelity." />
+    <meta name="twitter:image"       content="https://virtualcell.io/og-image.png" />
+
+    <!-- ─── SEO: Structured data (JSON-LD) ───────────────────────── -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Virtual Cell",
+      "applicationCategory": "ScientificApplication",
+      "description": "Biological intelligence platform for protein structure prediction, molecular dynamics simulation, and genomic analysis at atomic fidelity.",
+      "url": "https://virtualcell.io/",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/PreOrder"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Virtual Cell Inc.",
+        "url": "https://virtualcell.io/"
+      },
+      "featureList": [
+        "Full-atom protein structure prediction",
+        "Molecular dynamics simulation",
+        "CRISPR target prediction",
+        "Epigenetic mapping",
+        "Real-time WebGL visualization"
+      ]
+    }
+    </script>
+
+    <!-- Favicon — replace with real assets before deploying -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body>
 
+    <main>
     <!-- ─── Hero ──────────────────────────────────────────────────── -->
     <section class="hero">
       <!-- WebGL canvas injected here by main.js -->
@@ -499,6 +550,8 @@
       </div>
     </section>
 
+    </main>
+
     <!-- ─── Footer ─────────────────────────────────────────────────── -->
     <footer class="site-footer">
       <div class="container">
@@ -514,10 +567,10 @@
           <nav class="footer-nav" aria-label="Footer navigation">
             <div class="footer-col">
               <span class="footer-col-title">Platform</span>
-              <a href="#">Proteomics</a>
-              <a href="#">Genomics</a>
-              <a href="#">Simulation</a>
-              <a href="#">Cell Atlas</a>
+              <a href="#capabilities">Proteomics</a>
+              <a href="#capabilities">Genomics</a>
+              <a href="#capabilities">Simulation</a>
+              <a href="#atlas">Cell Atlas</a>
             </div>
             <div class="footer-col">
               <span class="footer-col-title">Research</span>
