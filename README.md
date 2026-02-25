@@ -28,7 +28,8 @@ pnpm build     # outputs to dist/
 | 05 | **Cell Atlas** | 3×2 grid of 6 cell types, CSS gradient visuals |
 | 06 | **Data Readout** | Spec table + mock simulation terminal |
 | 07 | **CTA** | Oversized typographic background, gradient headline |
-| — | **Footer** | Brand + 3-column navigation |
+| 08 | **Blueprint** | 6-row tech stack breakdown — how the platform would actually be built |
+| — | **Footer** | Brand + 3-column navigation with anchor links |
 
 ## Visual Design
 
@@ -93,6 +94,19 @@ Add `.reveal` to any element and optionally set `--reveal-delay` via inline styl
 ```
 
 `sections.js` uses `IntersectionObserver` (threshold 0.12) to add `.is-visible`, which transitions opacity and translateY.
+
+## SEO
+
+The `<head>` includes a full SEO setup:
+
+- **Meta description** and `robots` tag
+- **Canonical URL** — update `href` to the production domain before deploying
+- **Open Graph** tags for social sharing previews (og:title, og:description, og:image)
+- **Twitter/X Card** — `summary_large_image` format
+- **JSON-LD structured data** — `SoftwareApplication` schema for search engines
+- **Favicon** — `<link rel="icon" href="/favicon.svg">` — replace with real assets before deploying
+
+The placeholder domain used throughout is `https://virtualcell.io/`. Update all four occurrences (canonical, og:url, og:image, twitter:image) before going live.
 
 ## Deployment
 
