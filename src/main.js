@@ -386,20 +386,16 @@ function animate() {
   cellGroup.rotation.x = mouseY * 0.20;
 
   // Update uniforms on all shader objects
-  const uTime  = elapsed;
-  const uMorph = morphCurrent;
-  const uMouse = new THREE.Vector2(mouseX, mouseY);
+  membraneMat.uniforms.uTime.value  = elapsed;
+  membraneMat.uniforms.uMorph.value = morphCurrent;
+  membraneMat.uniforms.uMouse.value.set(mouseX, mouseY);
 
-  membraneMat.uniforms.uTime.value  = uTime;
-  membraneMat.uniforms.uMorph.value = uMorph;
-  membraneMat.uniforms.uMouse.value = uMouse;
+  innerMat.uniforms.uTime.value  = elapsed;
+  innerMat.uniforms.uMorph.value = morphCurrent;
+  innerMat.uniforms.uMouse.value.set(mouseX, mouseY);
 
-  innerMat.uniforms.uTime.value  = uTime;
-  innerMat.uniforms.uMorph.value = uMorph;
-  innerMat.uniforms.uMouse.value = uMouse;
-
-  particleMat.uniforms.uTime.value  = uTime;
-  particleMat.uniforms.uMorph.value = uMorph;
+  particleMat.uniforms.uTime.value  = elapsed;
+  particleMat.uniforms.uMorph.value = morphCurrent;
 
   // Nucleus subtle pulse
   const nucScale = 1 + Math.sin(elapsed * 1.8) * 0.06 + uMorph * 0.25;
