@@ -1,3 +1,6 @@
 node_modules/
 dist/
 .DS_Store
+
+# Claude Code local settings (tool permissions, session state)
+.claude/
