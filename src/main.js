@@ -398,7 +398,7 @@ function animate() {
   particleMat.uniforms.uMorph.value = morphCurrent;
 
   // Nucleus subtle pulse
-  const nucScale = 1 + Math.sin(elapsed * 1.8) * 0.06 + uMorph * 0.25;
+  const nucScale = 1 + Math.sin(elapsed * 1.8) * 0.06 + morphCurrent * 0.25;
   nucleusMesh.scale.setScalar(nucScale);
 
   renderer.render(scene, camera);
