@@ -4,6 +4,16 @@ A full marketing landing page for a biology SaaS product. Features a 3D morphing
 
 ![Virtual Cell hero](public/og-image.png)
 
+## What This Is
+
+This is an **open concept template** — a realistic, design-complete proposal for a computational biology SaaS platform. It is not a live product.
+
+The technical foundations are real: the specs, stack recommendations, tool names, and architecture all reflect how such a platform would actually be built today using current research-grade open-source software.
+
+**If you have the resources to build it:** everything in the Blueprint section is a genuine starting point. The simulation engines (GROMACS, OpenMM), structure prediction models (AlphaFold2, ESMFold), and biological databases (PDB, UniProt) are all freely available. The hard part — as the page states — is the compute infrastructure and scientific expertise.
+
+**If you love the design:** the visual system (WebGL cell, dark theme, typography, section layouts) is intentionally general enough to adapt to any scientific, data-heavy, or technical product. Fork it, replace the copy, and point the three pillars at whatever your platform actually does.
+
 ## Stack
 
 - **Vite ^6** — dev server + bundler
