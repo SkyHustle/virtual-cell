@@ -1,4 +1,7 @@
 import * as THREE from 'three';
+import { inject } from '@vercel/analytics';
+
+inject();
 
 // ─── Scene setup ────────────────────────────────────────────────
 const scene = new THREE.Scene();
